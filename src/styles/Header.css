@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: hsl(249, 100%, 75%);
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    color: hsl(30, 100%, 93%);
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
