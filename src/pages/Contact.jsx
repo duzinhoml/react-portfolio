@@ -1,4 +1,18 @@
+import React, { useState } from 'react';
+
 export default function Contact() {
+    const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState('');
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value)) {
+            setEmailError('Invalid email address');
+        } else {
+            setEmailError('');
+        }
+    };
+
     return(
         <div>
             <form>
@@ -8,8 +22,17 @@ export default function Contact() {
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required/>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                        value={email}
+                        onChange={handleEmailChange}
+                        required
+                    />
                     <label for="floatingInput">Email address</label>
+                    {emailError && <div className="text-danger">{emailError}</div>}
                 </div>
 
                 <div class="form-floating">
