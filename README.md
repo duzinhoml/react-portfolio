@@ -48,7 +48,7 @@ The application is built using Vite for fast performance and deployed on Netlify
 > 1.) Clone the repository:
 >
 > ```
-> git clone https://github.com/your-username/nordbot.git
+> git clone https://github.com/your-username/react-portfolio.git
 > ```
 >
 > 2.) Navigate to the project directory:
